@@ -10,7 +10,10 @@ import SwiftUI
 struct TransportCalculatorView: View {
     @State private var distance: Double = 0
     @State private var selectedTransportMode: String = "Car"
+    @State private var selectedDurationIndex = 0
     let transportModes = ["Car", "Bike", "Public Transport", "Walking", "Motorcycle"]
+    let durations = ["1 jour", "1 semaine", "1 mois", "6 mois", "1 an"]
+    let daysInMonth: Double = 30.44 // Moyenne de jours dans un mois
     
     var body: some View {
         NavigationStack {
@@ -29,8 +32,9 @@ struct TransportCalculatorView: View {
                             }
                         }
                     ))
+                    .keyboardType(.decimalPad) // Permet d'entrer uniquement des chiffres décimaux
                     .padding()
-                    .background(Color.white.opacity(0.9))
+                    .background(Color.white.opacity(0.4))
                     .cornerRadius(10)
                 }
                 .padding()
@@ -44,6 +48,27 @@ struct TransportCalculatorView: View {
                 .padding()
                 .background(Color.white.opacity(0.4))
                 .cornerRadius(10)
+                
+                Picker("Durée :", selection: $selectedDurationIndex) {
+                    ForEach(0..<durations.count, id: \.self) {
+                        Text(durations[$0])
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding()
+                .background(Color.white.opacity(0.4))
+                .cornerRadius(10)
+                
+                
+                Image("transport") // Utilisez le nom du fichier d'image sans l'extension
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                 .frame(width: 250, height: 250)
+                    .padding()
+              //  Image(systemName: "bolt.car")
+                 //   .resizable()
+                 //   .aspectRatio(contentMode: .fit)
+                  //  .padding(.vertical, 50)
                 
                 Spacer()
                 
@@ -66,8 +91,7 @@ struct TransportCalculatorView: View {
                 LinearGradient(gradient: Gradient(colors: [Color.gray, Color.green]), startPoint: .top, endPoint: .bottom)
                     .edgesIgnoringSafeArea(.all)
             )
-           // .foregroundColor(.white)
-            .navigationBarTitle(Text("Calculateur d'Empreinte Carbone - Transport"), displayMode: .inline)
+          //  .navigationBarTitle(Text("Calculateur d'Empreinte Carbone - Transport"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
         }
     }
@@ -76,7 +100,8 @@ struct TransportCalculatorView: View {
         var carbonFootprint = 0.0
         
         // Calcul basique de l'empreinte carbone
-        carbonFootprint += distance * 0.2 // Valeur arbitraire pour les émissions de CO2 par kilomètre
+        let daysInSelectedDuration = getDaysInSelectedDuration()
+        carbonFootprint += distance * 0.2 * daysInSelectedDuration // Valeur arbitraire pour les émissions de CO2 par kilomètre
         
         // Facteurs de conversion en fonction du mode de transport
         switch selectedTransportMode {
@@ -95,6 +120,23 @@ struct TransportCalculatorView: View {
         }
         
         return carbonFootprint
+    }
+    
+    func getDaysInSelectedDuration() -> Double {
+        switch selectedDurationIndex {
+        case 0: // 1 jour
+            return 1
+        case 1: // 1 semaine
+            return 7
+        case 2: // 1 mois
+            return daysInMonth
+        case 3: // 6 mois
+            return daysInMonth * 6
+        case 4: // 1 an
+            return daysInMonth * 12
+        default:
+            return 1
+        }
     }
 }
 
