@@ -13,8 +13,7 @@ struct ProjetMobileApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            ContentView(viewModel: HomeVideoViewModel())                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
