@@ -8,23 +8,39 @@
 import SwiftUI
 
 struct GetStartedView: View {
+    @State private var navigateToLocation = false
     var body: some View {
-        VStack {
-            Image("IMG_2958")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 300)
-            
-            Button("GET STARTED"){
+        NavigationStack{
+            VStack {
+                Image("IMG_2958")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 300)
+                
+                VStack {
+                    NavigationLink(destination: SignInView(), isActive: $navigateToLocation) {
+                        
+                    }
+                    
+                    .hidden()
+                    Spacer()
+                    Button(action: {
+                        navigateToLocation = true
+                        
+                    })
+                    {
+                        Text("  GET STARTED!    ")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.green)
+                            .cornerRadius(30)
+                            .frame(width: 300, height: 150)
+                    }
+                    
+                }
                 
             }
-            .foregroundColor(.white)
-            .font(.headline)
-            .padding()
-            .background(Color.green)
-            .cornerRadius(20)
-            .padding(.top, 150)
-           
         }
     }
 }
