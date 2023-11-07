@@ -14,54 +14,46 @@ struct ButtonInfo: Identifiable {
 }
 
 struct EnergieView: View {
-    let dates: [String] = ["15 Nov", "16 Nov", "17 Nov", "18 Nov"]
+    var currentDate = Date()
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMM"
+        return formatter
+    }()
+    
+    var dates: [String] {
+        var result: [String] = []
+        for i in 0..<4 {
+            if let date = Calendar.current.date(byAdding: .day, value: i, to: currentDate) {
+                result.append(dateFormatter.string(from: date))
+            }
+        }
+        return result
+    }
+    
     let boutonsInfo: [ButtonInfo] = [
-        ButtonInfo(icone: "cloud", texte: "Bouton 1"),
-        ButtonInfo(icone: "folder", texte: "Bouton 2"),
-        ButtonInfo(icone: "star", texte: "Bouton 3"),
-        ButtonInfo(icone: "arrow.up.square", texte: "Bouton 4"),
-        ButtonInfo(icone: "bell", texte: "Bouton 5")
+        ButtonInfo(icone: "house", texte: "domestique"),
+        ButtonInfo(icone: "car", texte: "transport"),
+        ButtonInfo(icone: "trash", texte: "déchets")
     ]
 
     var body: some View {
         VStack {
-            HStack(spacing: 100) {
-                Button(action: {
-                    // Action du premier bouton en haut
-                }) {
-                    Text("Bouton A")
-                        .font(.headline)
-                        .padding(20)
-                        .background(Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(30)
-                }
-                
-                Button(action: {
-                    // Action du deuxième bouton en haut
-                }) {
-                    Text("Bouton B")
-                        .font(.headline)
-                        .padding(20)
-                        .background(Color.gray)
-                        .foregroundColor(.white)
-                        .cornerRadius(30)
-                }
-            }
-            .padding(.top, 20)
+           
             Chart() // Remplacez "Chart()" par votre composant de diagramme
                 .frame(width: 300, height: 200) // Ajustez la taille du diagramme selon vos besoins
             HStack(spacing: 2) {
                 ForEach(dates, id: \.self) { date in
                     Text(date)
                         .font(.subheadline)
-                        .padding(20)
+                        .padding(15)
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(30)
                 }
             }
-            .padding(.top, 20)
+            .padding(.top, 50)
+            
             
             HStack(spacing: 20) {
                 ForEach(boutonsInfo.prefix(2)) { bouton in
@@ -120,4 +112,3 @@ struct Chart: View {
         Text("Votre diagramme ici")
     }
 }
-
