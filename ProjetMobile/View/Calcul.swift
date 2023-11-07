@@ -17,7 +17,7 @@ struct Calcul: View {
     let cities = ["Tunis", "Sfax", "Sousse"]
     let localTypes = ["Appartement", "Maison", "Villa"]
     let electricityConsumption = ["Faible", "Moyenne", "Élevée"]
-    let heatingTypes = ["Chauffage central", "Climatiseur réversible", "Chauffage électrique", "Chauffage au gaz", "Chauffage solaire", "Autre"]
+    let heatingTypes = ["Chauffage centraal", "Climatiseur réversible", "Chauffage électrique", "Chauffage au gaz", "Chauffage solaire", "Autre"]
     let energyEfficiencyRatings = [1, 2, 3, 4, 5]
     
     var body: some View {
