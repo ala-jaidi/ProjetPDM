@@ -45,7 +45,7 @@ struct ChallengeView: View {
                             // Contenu de la superposition interne (le cas échéant)
                         }
                     }
-                }
+                }  
                 .frame(width: 126, height: 34)
                 .offset(x: -97, y: -186)
                 .opacity(0.50)
@@ -67,10 +67,13 @@ struct ChallengeView: View {
                                 Image("Rectangle 56"))
                             .cornerRadius(12)
                             .offset(x: 0, y: -27.50)
-                        Text("Eco-rotic")
-                            .font(Font.custom("Poppins", size: 14).weight(.medium))
-                            .foregroundColor(.black)
-                            .offset(x: -0.50, y: 41)
+                        NavigationLink(destination: ViewDetailsD()) {
+                            Text("Eco-rotic")
+                                .font(Font.custom("Poppins", size: 14).weight(.medium))
+                                .foregroundColor(.black)
+                                .offset(x: -0.50, y: 41)
+                        }
+                        
                         
                         Rectangle()
                             .foregroundColor(.clear)
@@ -106,10 +109,13 @@ struct ChallengeView: View {
                                 Image("Rectangle 57"))
                             .cornerRadius(12)
                             .offset(x: 0, y: -27.50)
-                        Text("Green wear")
-                            .font(Font.custom("Poppins", size: 14).weight(.medium))
-                            .foregroundColor(.black)
-                            .offset(x: -1, y: 41)
+                        NavigationLink(destination: ViewDetailsD()) {
+                            Text("Green wear")
+                                .font(Font.custom("Poppins", size: 14).weight(.medium))
+                                .foregroundColor(.black)
+                                .offset(x: -1, y: 41)
+                        }
+                       
                         
                         Rectangle()
                             .foregroundColor(.clear)
@@ -145,10 +151,11 @@ struct ChallengeView: View {
                                 Image("Rectangle 56-2"))
                             .cornerRadius(12)
                             .offset(x: 0, y: -27.50)
-                        Text("On feet")
-                            .font(Font.custom("Poppins", size: 14).weight(.medium))
-                            .foregroundColor(.black)
-                            .offset(x: -0.50, y: 41)
+                        NavigationLink(destination: ViewDetailsD()) {
+                            Text("On feet")
+                                .font(Font.custom("Poppins", size: 14).weight(.medium))
+                                .foregroundColor(.black)
+                            .offset(x: -0.50, y: 41)}
                         
                         Rectangle()
                             .foregroundColor(.clear)
@@ -184,10 +191,11 @@ struct ChallengeView: View {
                                 Image("Rectangle 56-3"))
                             .cornerRadius(12)
                             .offset(x: 0, y: -27.50)
-                        Text("Eco-friendly")
-                            .font(Font.custom("Poppins", size: 14).weight(.medium))
-                            .foregroundColor(.black)
-                            .offset(x: -1, y: 41)
+                        NavigationLink(destination: ViewDetailsD()) {
+                            Text("Eco-friendly")
+                                .font(Font.custom("Poppins", size: 14).weight(.medium))
+                                .foregroundColor(.black)
+                            .offset(x: -1, y: 41)}
                         
                         Rectangle()
                             .foregroundColor(.clear)
@@ -253,23 +261,7 @@ struct ChallengeView: View {
             .cornerRadius(20)
             
         }
-        ZStack() {
-            // Votre code existant ici
-            
-            // Ajoutez un bouton "Back to Home"
-            NavigationLink(destination: HomeView()) {
-                Text("Back to Home")
-                    .font(Font.custom("Poppins", size: 16).weight(.semibold))
-                    .foregroundColor(Color(red: 0.44, green: 0.88, blue: 0))
-            }
-            .frame(width: 120, height: 40)
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-            .cornerRadius(12)
-            .offset(x: 0, y: -400)
-        }
-        .frame(width: 390, height: 844)
-        .background(Color.white)
-        .cornerRadius(20)
+    
     }
 }
 
