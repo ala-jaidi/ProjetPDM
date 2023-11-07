@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221987482AF9944500375ED2 /* Calcul.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221987472AF9944500375ED2 /* Calcul.swift */; };
+		2219874A2AF9954200375ED2 /* EnergieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221987492AF9954200375ED2 /* EnergieView.swift */; };
 		DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */; };
 		DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CE2AF962A300D97E35 /* Persistence.swift */; };
 		DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221987472AF9944500375ED2 /* Calcul.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calcul.swift; sourceTree = "<group>"; };
+		221987492AF9954200375ED2 /* EnergieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergieView.swift; sourceTree = "<group>"; };
 		DB8A59C92AF962A300D97E35 /* ProjetMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetMobileApp.swift; sourceTree = "<group>"; };
 		DB8A59CE2AF962A300D97E35 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -76,6 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221987412AF98CEE00375ED2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB8A59D32AF962A300D97E35 /* ContentView.swift */,
+				221987472AF9944500375ED2 /* Calcul.swift */,
+				221987492AF9954200375ED2 /* EnergieView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		221987452AF98D5500375ED2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		221987462AF98D5F00375ED2 /* view model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "view model";
+			sourceTree = "<group>";
+		};
 		DB8A59C02AF962A300D97E35 = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +127,11 @@
 		DB8A59CB2AF962A300D97E35 /* ProjetMobile */ = {
 			isa = PBXGroup;
 			children = (
-				DB8A59FE2AF9686E00D97E35 /* Model */,
-				DB8A59FD2AF9686200D97E35 /* ViewModel */,
-				DB8A59FC2AF9685A00D97E35 /* View */,
+				221987462AF98D5F00375ED2 /* view model */,
+				221987452AF98D5500375ED2 /* model */,
+				221987412AF98CEE00375ED2 /* View */,
 				DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */,
 				DB8A59CE2AF962A300D97E35 /* Persistence.swift */,
-				DB8A59D32AF962A300D97E35 /* ContentView.swift */,
 				DB8A59D52AF962A400D97E35 /* Assets.xcassets */,
 				DB8A59D72AF962A400D97E35 /* ProjetMobile.entitlements */,
 				DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */,
@@ -136,27 +163,6 @@
 				DB8A59EF2AF962A400D97E35 /* ProjetMobileUITestsLaunchTests.swift */,
 			);
 			path = ProjetMobileUITests;
-			sourceTree = "<group>";
-		};
-		DB8A59FC2AF9685A00D97E35 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		DB8A59FD2AF9686200D97E35 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		DB8A59FE2AF9686E00D97E35 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +298,8 @@
 				DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */,
 				DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */,
 				DB8A59D42AF962A300D97E35 /* ContentView.swift in Sources */,
+				221987482AF9944500375ED2 /* Calcul.swift in Sources */,
+				2219874A2AF9954200375ED2 /* EnergieView.swift in Sources */,
 				DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
