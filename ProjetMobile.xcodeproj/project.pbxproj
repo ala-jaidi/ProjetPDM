@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8F72B502AFAA57D00388C04 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F72B4F2AFAA57D00388C04 /* ChallengeView.swift */; };
+		B8F72B522AFAA5FD00388C04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F72B512AFAA5FD00388C04 /* HomeView.swift */; };
+		B8F72B542AFAAFB400388C04 /* AddChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F72B532AFAAFB400388C04 /* AddChallengeView.swift */; };
+		B8F72B562AFACC0D00388C04 /* ViewDetailsD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F72B552AFACC0D00388C04 /* ViewDetailsD.swift */; };
+		B8F72B582AFAE12800388C04 /* DetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F72B572AFAE12800388C04 /* DetailsEvent.swift */; };
 		DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */; };
 		DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CE2AF962A300D97E35 /* Persistence.swift */; };
 		DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8F72B4F2AFAA57D00388C04 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		B8F72B512AFAA5FD00388C04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B8F72B532AFAAFB400388C04 /* AddChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengeView.swift; sourceTree = "<group>"; };
+		B8F72B552AFACC0D00388C04 /* ViewDetailsD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsD.swift; sourceTree = "<group>"; };
+		B8F72B572AFAE12800388C04 /* DetailsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEvent.swift; sourceTree = "<group>"; };
 		DB8A59C92AF962A300D97E35 /* ProjetMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetMobileApp.swift; sourceTree = "<group>"; };
 		DB8A59CE2AF962A300D97E35 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -104,7 +114,6 @@
 				DB8A59FC2AF9685A00D97E35 /* View */,
 				DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */,
 				DB8A59CE2AF962A300D97E35 /* Persistence.swift */,
-				DB8A59D32AF962A300D97E35 /* ContentView.swift */,
 				DB8A59D52AF962A400D97E35 /* Assets.xcassets */,
 				DB8A59D72AF962A400D97E35 /* ProjetMobile.entitlements */,
 				DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */,
@@ -141,6 +150,12 @@
 		DB8A59FC2AF9685A00D97E35 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB8A59D32AF962A300D97E35 /* ContentView.swift */,
+				B8F72B4F2AFAA57D00388C04 /* ChallengeView.swift */,
+				B8F72B512AFAA5FD00388C04 /* HomeView.swift */,
+				B8F72B532AFAAFB400388C04 /* AddChallengeView.swift */,
+				B8F72B552AFACC0D00388C04 /* ViewDetailsD.swift */,
+				B8F72B572AFAE12800388C04 /* DetailsEvent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,9 +304,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8F72B542AFAAFB400388C04 /* AddChallengeView.swift in Sources */,
+				B8F72B582AFAE12800388C04 /* DetailsEvent.swift in Sources */,
 				DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */,
+				B8F72B562AFACC0D00388C04 /* ViewDetailsD.swift in Sources */,
 				DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */,
 				DB8A59D42AF962A300D97E35 /* ContentView.swift in Sources */,
+				B8F72B522AFAA5FD00388C04 /* HomeView.swift in Sources */,
+				B8F72B502AFAA57D00388C04 /* ChallengeView.swift in Sources */,
 				DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
