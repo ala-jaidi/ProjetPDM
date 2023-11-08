@@ -18,6 +18,10 @@
 		A8C95A6A2AFA94F500031D9B /* video6.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A8C95A642AFA94F500031D9B /* video6.mp4 */; };
 		A8C95A6B2AFA94F500031D9B /* video4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A8C95A652AFA94F500031D9B /* video4.mp4 */; };
 		A8C95A6C2AFA94F500031D9B /* video5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A8C95A662AFA94F500031D9B /* video5.mp4 */; };
+		A8F254C62AFC20AD005E24D5 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C52AFC20AD005E24D5 /* ChallengeView.swift */; };
+		A8F254C82AFC2123005E24D5 /* AddChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C72AFC2123005E24D5 /* AddChallengeView.swift */; };
+		A8F254CA2AFC2153005E24D5 /* ViewDetailsD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C92AFC2153005E24D5 /* ViewDetailsD.swift */; };
+		A8F254CD2AFC2175005E24D5 /* DetailsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254CC2AFC2175005E24D5 /* DetailsEvent.swift */; };
 		DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */; };
 		DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CE2AF962A300D97E35 /* Persistence.swift */; };
 		DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */; };
@@ -58,6 +62,10 @@
 		A8C95A642AFA94F500031D9B /* video6.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video6.mp4; sourceTree = "<group>"; };
 		A8C95A652AFA94F500031D9B /* video4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video4.mp4; sourceTree = "<group>"; };
 		A8C95A662AFA94F500031D9B /* video5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video5.mp4; sourceTree = "<group>"; };
+		A8F254C52AFC20AD005E24D5 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		A8F254C72AFC2123005E24D5 /* AddChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengeView.swift; sourceTree = "<group>"; };
+		A8F254C92AFC2153005E24D5 /* ViewDetailsD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsD.swift; sourceTree = "<group>"; };
+		A8F254CC2AFC2175005E24D5 /* DetailsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsEvent.swift; sourceTree = "<group>"; };
 		DB8A59C92AF962A300D97E35 /* ProjetMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetMobileApp.swift; sourceTree = "<group>"; };
 		DB8A59CE2AF962A300D97E35 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -170,6 +178,10 @@
 			children = (
 				A8B302532AFADE350052C33E /* VideoScrollView.swift */,
 				DB8A59D32AF962A300D97E35 /* ContentView.swift */,
+				A8F254C52AFC20AD005E24D5 /* ChallengeView.swift */,
+				A8F254C72AFC2123005E24D5 /* AddChallengeView.swift */,
+				A8F254C92AFC2153005E24D5 /* ViewDetailsD.swift */,
+				A8F254CC2AFC2175005E24D5 /* DetailsEvent.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,11 +343,15 @@
 				A8B302542AFADE350052C33E /* VideoScrollView.swift in Sources */,
 				A8B302582AFADE3B0052C33E /* HomeVideoViewModel.swift in Sources */,
 				DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */,
+				A8F254C82AFC2123005E24D5 /* AddChallengeView.swift in Sources */,
 				A8B302522AFADE300052C33E /* VideoSc.swift in Sources */,
+				A8F254CD2AFC2175005E24D5 /* DetailsEvent.swift in Sources */,
 				DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */,
+				A8F254CA2AFC2153005E24D5 /* ViewDetailsD.swift in Sources */,
 				DB8A59D42AF962A300D97E35 /* ContentView.swift in Sources */,
 				DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */,
 				A8B302572AFADE3B0052C33E /* VideosViewModel.swift in Sources */,
+				A8F254C62AFC20AD005E24D5 /* ChallengeView.swift in Sources */,
 				A8B302512AFADE300052C33E /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
