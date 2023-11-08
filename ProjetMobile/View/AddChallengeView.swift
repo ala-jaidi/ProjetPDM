@@ -45,11 +45,7 @@ struct AddChallengeView: View {
                        }
                            NavigationLink(destination: ChallengeView()) {
                                Text("Consulter liste des defis")
-                                   .font(.title3)
-                                   .padding()
-                                   .background(Color.green)
-                                   .foregroundColor(.white)
-                                   .cornerRadius(20)
+                                  
                            }
                        
                            

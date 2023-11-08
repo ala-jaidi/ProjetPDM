@@ -37,7 +37,7 @@ struct DetailsEvent: View {
                     .padding()
                     .background(Color.green)
                     .foregroundColor(.white)
-                    .cornerRadius(10)
+                    .cornerRadius(30)
             }
         }
       
