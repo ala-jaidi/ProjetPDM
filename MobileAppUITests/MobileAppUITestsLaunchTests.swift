@@ -1,13 +1,13 @@
 //
-//  ProjetMobileUITestsLaunchTests.swift
-//  ProjetMobileUITests
+//  MobileAppUITestsLaunchTests.swift
+//  MobileAppUITests
 //
-//  Created by IssamGuezmir on 6/11/2023.
+//  Created by ichrakbenmahmoud on 6/11/2023.
 //
 
 import XCTest
 
-final class ProjetMobileUITestsLaunchTests: XCTestCase {
+final class MobileAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

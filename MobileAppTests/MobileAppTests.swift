@@ -1,13 +1,13 @@
 //
-//  ProjetMobileTests.swift
-//  ProjetMobileTests
+//  MobileAppTests.swift
+//  MobileAppTests
 //
-//  Created by IssamGuezmir on 6/11/2023.
+//  Created by ichrakbenmahmoud on 6/11/2023.
 //
 
 import XCTest
 
-final class ProjetMobileTests: XCTestCase {
+final class MobileAppTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
