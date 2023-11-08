@@ -16,6 +16,7 @@ struct AddChallengeView: View {
        @State private var showImagePicker = false
     var body: some View {
         NavigationView {
+            
                    Form {
                        Section(header: Text("Informations du défi")) {
                            TextField("Titre", text: $title)
@@ -47,7 +48,10 @@ struct AddChallengeView: View {
                                Text("Consulter liste des defis")
                                   
                            }
-                       
+                       NavigationLink(destination: ViewDetailsD()) {
+                           Text("Consulter details Challenge")
+                              
+                       }
                            
 
                    }
