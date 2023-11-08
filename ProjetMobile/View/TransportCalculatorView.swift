@@ -93,7 +93,7 @@ struct TransportCalculatorView: View {
             )
           //  .navigationBarTitle(Text("Calculateur d'Empreinte Carbone - Transport"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-        }
+        }.navigationBarBackButtonHidden(true)
     }
     
     func calculateCarbonFootprint() -> Double {
