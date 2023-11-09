@@ -24,6 +24,11 @@
 		A8CF7CB02AFC4B7600F8EAA1 /* DomestiqueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CAF2AFC4B7600F8EAA1 /* DomestiqueView.swift */; };
 		A8CF7CB22AFC4B8B00F8EAA1 /* TransportCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CB12AFC4B8B00F8EAA1 /* TransportCalculatorView.swift */; };
 		A8CF7CB42AFC4BA000F8EAA1 /* WasteCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CB32AFC4BA000F8EAA1 /* WasteCalculatorView.swift */; };
+		A8CF7CB62AFC4ED200F8EAA1 /* GetStartedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CB52AFC4ED200F8EAA1 /* GetStartedView.swift */; };
+		A8CF7CB82AFC4EE500F8EAA1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CB72AFC4EE500F8EAA1 /* SignInView.swift */; };
+		A8CF7CBA2AFC4EF500F8EAA1 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CB92AFC4EF500F8EAA1 /* SignUpView.swift */; };
+		A8CF7CBC2AFC4F0700F8EAA1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CBB2AFC4F0700F8EAA1 /* ProfileView.swift */; };
+		A8CF7CBE2AFC4F2700F8EAA1 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CF7CBD2AFC4F2700F8EAA1 /* ForgotPasswordView.swift */; };
 		A8F254C62AFC20AD005E24D5 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C52AFC20AD005E24D5 /* ChallengeView.swift */; };
 		A8F254C82AFC2123005E24D5 /* AddChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C72AFC2123005E24D5 /* AddChallengeView.swift */; };
 		A8F254CA2AFC2153005E24D5 /* ViewDetailsD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F254C92AFC2153005E24D5 /* ViewDetailsD.swift */; };
@@ -80,6 +85,11 @@
 		A8CF7CAF2AFC4B7600F8EAA1 /* DomestiqueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomestiqueView.swift; sourceTree = "<group>"; };
 		A8CF7CB12AFC4B8B00F8EAA1 /* TransportCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportCalculatorView.swift; sourceTree = "<group>"; };
 		A8CF7CB32AFC4BA000F8EAA1 /* WasteCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteCalculatorView.swift; sourceTree = "<group>"; };
+		A8CF7CB52AFC4ED200F8EAA1 /* GetStartedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedView.swift; sourceTree = "<group>"; };
+		A8CF7CB72AFC4EE500F8EAA1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		A8CF7CB92AFC4EF500F8EAA1 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		A8CF7CBB2AFC4F0700F8EAA1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		A8CF7CBD2AFC4F2700F8EAA1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		A8F254C52AFC20AD005E24D5 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
 		A8F254C72AFC2123005E24D5 /* AddChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengeView.swift; sourceTree = "<group>"; };
 		A8F254C92AFC2153005E24D5 /* ViewDetailsD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsD.swift; sourceTree = "<group>"; };
@@ -216,6 +226,11 @@
 				A8CF7CAF2AFC4B7600F8EAA1 /* DomestiqueView.swift */,
 				A8CF7CB12AFC4B8B00F8EAA1 /* TransportCalculatorView.swift */,
 				A8CF7CB32AFC4BA000F8EAA1 /* WasteCalculatorView.swift */,
+				A8CF7CB52AFC4ED200F8EAA1 /* GetStartedView.swift */,
+				A8CF7CB72AFC4EE500F8EAA1 /* SignInView.swift */,
+				A8CF7CB92AFC4EF500F8EAA1 /* SignUpView.swift */,
+				A8CF7CBB2AFC4F0700F8EAA1 /* ProfileView.swift */,
+				A8CF7CBD2AFC4F2700F8EAA1 /* ForgotPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -387,6 +402,7 @@
 				A8B302522AFADE300052C33E /* VideoSc.swift in Sources */,
 				A8CF7CAA2AFC4B3C00F8EAA1 /* ConsumptionData.swift in Sources */,
 				A8F254CD2AFC2175005E24D5 /* DetailsEvent.swift in Sources */,
+				A8CF7CBC2AFC4F0700F8EAA1 /* ProfileView.swift in Sources */,
 				DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */,
 				A8F254CA2AFC2153005E24D5 /* ViewDetailsD.swift in Sources */,
 				A8CF7CB02AFC4B7600F8EAA1 /* DomestiqueView.swift in Sources */,
@@ -394,12 +410,16 @@
 				A8CF7CAE2AFC4B6300F8EAA1 /* EnergieView.swift in Sources */,
 				A8CF7CB42AFC4BA000F8EAA1 /* WasteCalculatorView.swift in Sources */,
 				DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */,
+				A8CF7CB82AFC4EE500F8EAA1 /* SignInView.swift in Sources */,
 				A8CF7CAC2AFC4B5200F8EAA1 /* Calcul.swift in Sources */,
 				A8CF7CB22AFC4B8B00F8EAA1 /* TransportCalculatorView.swift in Sources */,
 				A8B302572AFADE3B0052C33E /* VideosViewModel.swift in Sources */,
 				A8F255052AFC33E7005E24D5 /* Messagerie.swift in Sources */,
 				A8F254C62AFC20AD005E24D5 /* ChallengeView.swift in Sources */,
+				A8CF7CBA2AFC4EF500F8EAA1 /* SignUpView.swift in Sources */,
+				A8CF7CB62AFC4ED200F8EAA1 /* GetStartedView.swift in Sources */,
 				A8B302512AFADE300052C33E /* Video.swift in Sources */,
+				A8CF7CBE2AFC4F2700F8EAA1 /* ForgotPasswordView.swift in Sources */,
 				A8F254F12AFC2C7F005E24D5 /* DetailsUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

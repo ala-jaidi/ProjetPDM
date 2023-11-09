@@ -89,7 +89,7 @@ struct EnergyCalculatorView: View {
                     .font(.headline)
                     .padding(-5)
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ContenView()) {
                     Text("Back")
                         .font(.headline)
                         .padding()

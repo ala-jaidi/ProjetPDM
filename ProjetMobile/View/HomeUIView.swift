@@ -11,47 +11,47 @@ struct HomeUIView: View {
     var body: some View {
         NavigationView{
             ZStack() {
-                ZStack() {
-                    NavigationLink(destination: DetailsUIView()) {
-                        ZStack() {
-                            Image("ph_chat-teardrop-dots-fill")
-                            
-                        }}
-                    .frame(width: 30, height: 30)
-                    .offset(x: 139, y: -11)
-                    NavigationLink(destination: DetailsUIView()) {
-                        ZStack() {
-                            Image("fluent_people-community-20-filled")
-                        }}
-                    .frame(width: 30, height: 30)
-                    .offset(x: 46, y: -11)
-                    NavigationLink(destination: DetailsUIView()) {
-                        ZStack() {
-                            Image("material-symbols_track-changes-rounded")
-                        }}
-                    .frame(width: 30, height: 30)
-                    .offset(x: -47, y: -11)
-                    NavigationLink(destination: DetailsUIView()) {
-                        ZStack() {
-                            Image("basil_home-solid")
-                        }}
-                    .frame(width: 30, height: 30)
-                    .offset(x: -140, y: -11)
-                    Rectangle()
-                        .foregroundColor(.clear)
-                        .frame(width: 169.01, height: 0)
-                        .overlay(Rectangle()
-                            .stroke(.black, lineWidth: 2.10))
-                        .offset(x: -0.49, y: 40)
-                    
-                }
-                .frame(width: 390, height: 100)
-                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-                .cornerRadius(20)
-                .offset(x: 0, y: 372)
-                .shadow(
-                    color: Color(red: 0, green: 0, blue: 0, opacity: 0.05), radius: 25
-                )
+//                ZStack() {
+//                    NavigationLink(destination: DetailsUIView()) {
+//                        ZStack() {
+//                            Image("ph_chat-teardrop-dots-fill")
+//                            
+//                        }}
+//                    .frame(width: 30, height: 30)
+//                    .offset(x: 139, y: -11)
+//                    NavigationLink(destination: DetailsUIView()) {
+//                        ZStack() {
+//                            Image("fluent_people-community-20-filled")
+//                        }}
+//                    .frame(width: 30, height: 30)
+//                    .offset(x: 46, y: -11)
+//                    NavigationLink(destination: DetailsUIView()) {
+//                        ZStack() {
+//                            Image("material-symbols_track-changes-rounded")
+//                        }}
+//                    .frame(width: 30, height: 30)
+//                    .offset(x: -47, y: -11)
+//                    NavigationLink(destination: DetailsUIView()) {
+//                        ZStack() {
+//                            Image("basil_home-solid")
+//                        }}
+//                    .frame(width: 30, height: 30)
+//                    .offset(x: -140, y: -11)
+//                    Rectangle()
+//                        .foregroundColor(.clear)
+//                        .frame(width: 169.01, height: 0)
+//                        .overlay(Rectangle()
+//                            .stroke(.black, lineWidth: 2.10))
+//                        .offset(x: -0.49, y: 40)
+//                    
+//                }
+//                .frame(width: 390, height: 100)
+//                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+//                .cornerRadius(20)
+//                .offset(x: 0, y: 372)
+//                .shadow(
+//                    color: Color(red: 0, green: 0, blue: 0, opacity: 0.05), radius: 25
+//                )
                 Text("Good Morning")
                     .font(Font.custom("Poppins", size: 28).weight(.semibold))
                     .foregroundColor(Color(red: 0.12, green: 0.12, blue: 0.12))

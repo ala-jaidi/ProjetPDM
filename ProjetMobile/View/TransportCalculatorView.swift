@@ -76,7 +76,7 @@ struct TransportCalculatorView: View {
                     .font(.headline)
                     .padding()
                 
-                NavigationLink(destination: ContentView()) {
+                NavigationLink(destination: ContenView()) {
                     Text("Back")
                         .font(.headline)
                         .padding()

@@ -6,6 +6,51 @@
 //
 
 import SwiftUI
+import MapKit
+
+struct ContentsView: View {
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 36.8757855, longitude: 10.1778645), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.1))
+    
+    @State private var searchText = ""
+    
+    var body: some View {
+        NavigationView {
+                    ZStack {
+                        
+                        Map(coordinateRegion: $region, showsUserLocation: true)
+                            .ignoresSafeArea()
+
+                        VStack {
+                            HStack {
+                                TextField("Search Eco_points.....", text: $searchText)
+                                    .font(.subheadline)
+                                    .padding(15)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                    .padding()
+                                    .shadow(radius: 10)
+                                    Button(action: {
+                                    // Logique de recherche
+                                    performSearch()
+                                }) {
+                                    Image(systemName: "magnifyingglass")
+                                }
+                                .padding(.trailing, 27)
+                            }
+                            Spacer()
+                        }
+                    }
+                }
+                .navigationBarHidden(true)
+            }
+
+            func performSearch() {
+                
+            }
+        }
+
+     
+
 
 struct SwiftUIView: View {
     @State private var isNavigationActive = false // Utilisez cet état pour activer la navigation
@@ -16,7 +61,7 @@ struct SwiftUIView: View {
                 // Autres contenus
 
                 NavigationLink(
-                                    destination: ContentView(),
+                                    destination: ContentsView(),
                                     isActive: $isNavigationActive,
                                     label: {
                                         EmptyView() // This is used to hide the navigation link

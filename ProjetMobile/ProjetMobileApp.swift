@@ -9,11 +9,12 @@ import SwiftUI
 
 @main
 struct ProjetMobileApp: App {
+    
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+           GetStartedView()
         }
     }
 }
