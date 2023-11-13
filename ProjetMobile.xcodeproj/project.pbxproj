@@ -11,6 +11,8 @@
 		224C49252AFA9E5E00DB4175 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C49242AFA9E5E00DB4175 /* ProfileView.swift */; };
 		224C49292AFAB35000DB4175 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C49282AFAB35000DB4175 /* ForgotPasswordView.swift */; };
 		224C492B2AFAB7D700DB4175 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C492A2AFAB7D700DB4175 /* User.swift */; };
+		DB3442882B028A16002A7E2F /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3442872B028A16002A7E2F /* MessageView.swift */; };
+		DB34428A2B028C4C002A7E2F /* MailChangingPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3442892B028C4C002A7E2F /* MailChangingPasswordView.swift */; };
 		DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */; };
 		DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59CE2AF962A300D97E35 /* Persistence.swift */; };
 		DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB8A59D02AF962A300D97E35 /* ProjetMobile.xcdatamodeld */; };
@@ -45,6 +47,8 @@
 		224C49242AFA9E5E00DB4175 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		224C49282AFAB35000DB4175 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		224C492A2AFAB7D700DB4175 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ProjetMobile/model/User.swift; sourceTree = SOURCE_ROOT; };
+		DB3442872B028A16002A7E2F /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		DB3442892B028C4C002A7E2F /* MailChangingPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailChangingPasswordView.swift; sourceTree = "<group>"; };
 		DB8A59C92AF962A300D97E35 /* ProjetMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB8A59CC2AF962A300D97E35 /* ProjetMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetMobileApp.swift; sourceTree = "<group>"; };
 		DB8A59CE2AF962A300D97E35 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				224C49222AFA797D00DB4175 /* SignUpView.swift */,
 				224C49242AFA9E5E00DB4175 /* ProfileView.swift */,
 				224C49282AFAB35000DB4175 /* ForgotPasswordView.swift */,
+				DB3442872B028A16002A7E2F /* MessageView.swift */,
+				DB3442892B028C4C002A7E2F /* MailChangingPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,10 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB34428A2B028C4C002A7E2F /* MailChangingPasswordView.swift in Sources */,
 				224C49252AFA9E5E00DB4175 /* ProfileView.swift in Sources */,
 				DB8A5A102AF99B1200D97E35 /* SignInView.swift in Sources */,
 				DB8A59D22AF962A300D97E35 /* ProjetMobile.xcdatamodeld in Sources */,
 				DB8A59CD2AF962A300D97E35 /* ProjetMobileApp.swift in Sources */,
+				DB3442882B028A16002A7E2F /* MessageView.swift in Sources */,
 				224C49232AFA797D00DB4175 /* SignUpView.swift in Sources */,
 				DB8A59CF2AF962A300D97E35 /* Persistence.swift in Sources */,
 				224C49292AFAB35000DB4175 /* ForgotPasswordView.swift in Sources */,

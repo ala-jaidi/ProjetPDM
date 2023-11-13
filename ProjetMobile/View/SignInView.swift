@@ -70,12 +70,11 @@ struct SignInView: View {
                               }
                 
                 HStack{
-                    Text("Remember Me")
-                    Toggle("", isOn: $remembreMe)
-                    
-                  
-                   
-                    
+                    Spacer()
+                   Text(" Fogot Password ? ")
+                        .font(.callout)
+                        .foregroundColor(.gray)
+                        
                 }
                 VStack{
                 
