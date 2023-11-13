@@ -11,51 +11,47 @@ struct ContentView: View {
     @State private var energyConsumption: Double = 100
     @State private var transportEmissions: Double = 50
     @State private var wasteEmissions: Double = 30
-    @State private var showChartDetails = false // Pour afficher les détails du diagramme
+
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy"
+        return formatter.string(from: selectedDate)
+    }
+
+    var totalEmissions: Double {
+        return energyConsumption + transportEmissions + wasteEmissions
+    }
 
     var body: some View {
         NavigationView {
             VStack {
-                // Affichage du Total empreinte
-                ZStack {
-                    Capsule()
-                        .fill(Color.green)
-                        .frame(height: 40)
-                        .opacity(0.8)
+                // Affichage de la date d'aujourd'hui
+                Text(formattedDate)
+                    .font(.title)
+                    .padding()
 
-                    Text("Total empreinte: \(totalEmissions)")
+                // Affichage du total de l'empreinte de manière plus esthétique
+                VStack {
+                    Text("Total empreinte")
                         .font(.headline)
+                        .foregroundColor(Color.green)
+
+                    Text("\(totalEmissions, specifier: "%.2f") kg CO2")
+                        .font(.title)
                         .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 15)
+                                .fill(Color.green)
+                                .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                        )
+                        .cornerRadius(15)
                 }
                 .padding()
 
-                // Sélecteur de date
-                Button(action: {
-                    // Ne rien faire lors de l'appui sur la date
-                }) {
-                    // Afficher la date sélectionnée de manière formatée
-                    Text(dateFormatter.string(from: selectedDate))
-                        .padding()
-                        .background(Color.gray.opacity(0.2))
-                        .cornerRadius(10)
-                }
-
-                // Diagramme
                 BarChartView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"])
                     .frame(height: 200)
                     .padding()
-                    .onTapGesture {
-                        // Afficher les détails du diagramme lorsque le diagramme est tapé
-                        showChartDetails.toggle()
-                    }
-                    .background(
-                        NavigationLink(
-                            destination: ChartDetailsView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"]),
-                            isActive: $showChartDetails) {
-                                EmptyView()
-                            }
-                        .opacity(0)
-                    )
 
                 HStack(spacing: 20) {
                     NavigationLink(destination: EnergyCalculatorView()) {
@@ -64,6 +60,11 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.green)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            )
                     }
 
                     NavigationLink(destination: TransportCalculatorView()) {
@@ -72,6 +73,11 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.green)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            )
                     }
 
                     NavigationLink(destination: WasteCalculatorView()) {
@@ -80,6 +86,11 @@ struct ContentView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.green)
+                            .background(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .fill(Color.white)
+                                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            )
                     }
                 }
                 .padding()
@@ -87,20 +98,14 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
-            .navigationBarBackButtonHidden(true)
-        }
+           
+        } .navigationBarBackButtonHidden(true)
     }
+}
 
-    // Formateur de date pour formater la date affichée
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.timeStyle = .none
-        return formatter
-    }
-
-    var totalEmissions: Double {
-        return energyConsumption + transportEmissions + wasteEmissions
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
@@ -123,6 +128,11 @@ struct BarChartView: View {
                     Rectangle()
                         .frame(width: 40, height: CGFloat(values[index]) / CGFloat(maxValue) * 100, alignment: .bottom)
                         .foregroundColor(Color.blue)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.white, lineWidth: 1)
+                        )
                     Text(labels[index])
                         .padding(.top, 5)
                 }
@@ -131,22 +141,22 @@ struct BarChartView: View {
     }
 }
 
-struct ChartDetailsView: View {
-    let values: [Double]
-    let labels: [String]
-
+/*
+struct EnergyCalculatorView: View {
     var body: some View {
-        // Implémentez ici l'affichage des détails du diagramme
-        // Peut-être une vue avec des informations détaillées ou un graphique interactif
-        //...
-        Text("normalement, vous afficheriez des informations détaillées sur la consommation ici.")
+        Text("Energy Calculator View")
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct TransportCalculatorView: View {
+    var body: some View {
+        Text("Transport Calculator View")
     }
 }
 
+struct WasteCalculatorView: View {
+    var body: some View {
+        Text("Waste Calculator View")
+    }
+}
+*/
