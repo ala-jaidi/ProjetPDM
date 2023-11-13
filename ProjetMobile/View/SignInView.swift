@@ -89,9 +89,11 @@ struct SignInView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 
-                Text("--------------------Or With-------------------")
+                Text("Or With")
+                    
                     .foregroundColor(.gray)
                     .frame(alignment: .leading)
+                    
                 }
                 HStack{
                     Button("Facebook"){

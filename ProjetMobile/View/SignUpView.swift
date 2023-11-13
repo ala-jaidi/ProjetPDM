@@ -103,7 +103,7 @@ struct SignUpView: View {
                     .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    Text("--------------------Or With-------------------")
+                    Text("Or With")
                         
                         .foregroundColor(.gray)
                         .frame(alignment: .leading)

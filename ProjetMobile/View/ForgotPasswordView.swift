@@ -27,6 +27,7 @@ struct ForgotPasswordView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             
+            
             VStack{
                 
                 Button("Send"){
