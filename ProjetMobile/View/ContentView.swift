@@ -13,10 +13,6 @@ struct ContentView: View {
     @State private var wasteEmissions: Double = 30
     @State private var showChartDetails = false // Pour afficher les détails du diagramme
 
-    var totalEmissions: Double {
-        return energyConsumption + transportEmissions + wasteEmissions
-    }
-
     var body: some View {
         NavigationView {
             VStack {
@@ -35,20 +31,13 @@ struct ContentView: View {
 
                 // Sélecteur de date
                 Button(action: {
-                    // Ouvrir le sélecteur de date lorsque le bouton est appuyé
-                    showChartDetails.toggle()
+                    // Ne rien faire lors de l'appui sur la date
                 }) {
                     // Afficher la date sélectionnée de manière formatée
                     Text(dateFormatter.string(from: selectedDate))
                         .padding()
                         .background(Color.gray.opacity(0.2))
                         .cornerRadius(10)
-                }
-                .sheet(isPresented: $showChartDetails) {
-                    // Utiliser une vue séparée pour le sélecteur de date
-                    DatePicker("Sélectionner une date", selection: $selectedDate, displayedComponents: .date)
-                        .datePickerStyle(GraphicalDatePickerStyle())
-                        .labelsHidden()
                 }
 
                 // Diagramme
@@ -59,11 +48,15 @@ struct ContentView: View {
                         // Afficher les détails du diagramme lorsque le diagramme est tapé
                         showChartDetails.toggle()
                     }
-                    .background(NavigationLink(destination: ChartDetailsView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"])) {
-                        EmptyView()
-                    }
-                    .opacity(0))
-                    
+                    .background(
+                        NavigationLink(
+                            destination: ChartDetailsView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"]),
+                            isActive: $showChartDetails) {
+                                EmptyView()
+                            }
+                        .opacity(0)
+                    )
+
                 HStack(spacing: 20) {
                     NavigationLink(destination: EnergyCalculatorView()) {
                         Image(systemName: "house")
@@ -105,6 +98,10 @@ struct ContentView: View {
         formatter.timeStyle = .none
         return formatter
     }
+
+    var totalEmissions: Double {
+        return energyConsumption + transportEmissions + wasteEmissions
+    }
 }
 
 struct BarChartView: View {
@@ -145,6 +142,7 @@ struct ChartDetailsView: View {
         Text("normalement, vous afficheriez des informations détaillées sur la consommation ici.")
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
