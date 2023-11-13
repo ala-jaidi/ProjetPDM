@@ -12,26 +12,58 @@ struct ContentView: View {
     @State private var transportEmissions: Double = 50
     @State private var wasteEmissions: Double = 30
     @State private var showChartDetails = false // Pour afficher les détails du diagramme
-    
+
+    var totalEmissions: Double {
+        return energyConsumption + transportEmissions + wasteEmissions
+    }
+
     var body: some View {
         NavigationView {
             VStack {
-                DatePicker("", selection: $selectedDate, displayedComponents: .date)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                    .padding()
-                
+                // Affichage du Total empreinte
+                ZStack {
+                    Capsule()
+                        .fill(Color.green)
+                        .frame(height: 40)
+                        .opacity(0.8)
+
+                    Text("Total empreinte: \(totalEmissions)")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                }
+                .padding()
+
+                // Sélecteur de date
+                Button(action: {
+                    // Ouvrir le sélecteur de date lorsque le bouton est appuyé
+                    showChartDetails.toggle()
+                }) {
+                    // Afficher la date sélectionnée de manière formatée
+                    Text(dateFormatter.string(from: selectedDate))
+                        .padding()
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(10)
+                }
+                .sheet(isPresented: $showChartDetails) {
+                    // Utiliser une vue séparée pour le sélecteur de date
+                    DatePicker("Sélectionner une date", selection: $selectedDate, displayedComponents: .date)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                        .labelsHidden()
+                }
+
+                // Diagramme
                 BarChartView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"])
                     .frame(height: 200)
                     .padding()
                     .onTapGesture {
-                        // Afficher les détails du diagramme
+                        // Afficher les détails du diagramme lorsque le diagramme est tapé
                         showChartDetails.toggle()
                     }
-                    .sheet(isPresented: $showChartDetails) {
-                        // Afficher les détails du diagramme dans un popup ou une nouvelle vue
-                        ChartDetailsView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"])
+                    .background(NavigationLink(destination: ChartDetailsView(values: [energyConsumption, transportEmissions, wasteEmissions], labels: ["Énergie", "Transport", "Déchets"])) {
+                        EmptyView()
                     }
-                
+                    .opacity(0))
+                    
                 HStack(spacing: 20) {
                     NavigationLink(destination: EnergyCalculatorView()) {
                         Image(systemName: "house")
@@ -40,7 +72,7 @@ struct ContentView: View {
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.green)
                     }
-                    
+
                     NavigationLink(destination: TransportCalculatorView()) {
                         Image(systemName: "car")
                             .resizable()
@@ -48,7 +80,7 @@ struct ContentView: View {
                             .frame(width: 50, height: 50)
                             .foregroundColor(Color.green)
                     }
-                    
+
                     NavigationLink(destination: WasteCalculatorView()) {
                         Image(systemName: "trash")
                             .resizable()
@@ -58,23 +90,20 @@ struct ContentView: View {
                     }
                 }
                 .padding()
-                
+
                 Spacer()
             }
             .padding()
-            .background(
-                LinearGradient(gradient: Gradient(colors: [Color.green, Color.orange, Color.gray]), startPoint: .top, endPoint: .bottom)
-                    .edgesIgnoringSafeArea(.all)
-            )
-            .navigationBarTitle(Text("Accueil"), displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-        }.navigationBarBackButtonHidden(true)
+        }
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    // Formateur de date pour formater la date affichée
+    private var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.timeStyle = .none
+        return formatter
     }
 }
 
@@ -82,13 +111,13 @@ struct BarChartView: View {
     let values: [Double]
     let labels: [String]
     let maxValue: Double
-    
+
     init(values: [Double], labels: [String]) {
         self.values = values
         self.labels = labels
         self.maxValue = values.max() ?? 1 // Éviter la division par zéro
     }
-    
+
     var body: some View {
         HStack(spacing: 20) {
             ForEach(0..<values.count, id: \.self) { index in
@@ -108,11 +137,18 @@ struct BarChartView: View {
 struct ChartDetailsView: View {
     let values: [Double]
     let labels: [String]
-    
+
     var body: some View {
         // Implémentez ici l'affichage des détails du diagramme
         // Peut-être une vue avec des informations détaillées ou un graphique interactif
         //...
-        Text("normalemt yo5erjoulou des information 3alla consommation mte3ou houa detailler ")
+        Text("normalement, vous afficheriez des informations détaillées sur la consommation ici.")
     }
 }
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
