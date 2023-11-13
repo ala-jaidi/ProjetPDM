@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State private var firstname = ""
-    @State private var lastname = ""
+    @State private var fullname = ""
     @State private var email = ""
-    @State private var phone = ""
     @State private var password = ""
-    @State private var dateBirth = ""
     @State private var VerifyPassword = ""
-    @State private var remembreMe = false
+    
 
 
     
@@ -27,29 +24,21 @@ struct SignUpView: View {
                     .fontWeight(.bold)
                 
                 
-                Text("Connect with your friends today !")
+                Text("Connect with your friends today ! 👋")
                     .font(.title3)
                     .foregroundColor(.gray)
                     .frame(alignment: .leading)
                 
-                Text("First Name")
+                Text("Full Name")
                     .font(.title3)
                     .foregroundColor(.green)
                     .frame(alignment: .leading)
                 
                 VStack{
-                    TextField("Enter your first name", text: $firstname)
+                    TextField("Enter your fullname", text: $fullname)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
-                Text("Last Name")
-                    .font(.title3)
-                    .foregroundColor(.green)
-                    .frame(alignment: .leading)
                 
-                VStack{
-                    TextField("Enter your last name" , text: $lastname)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                }
                 Text("Email Adress")
                     .font(.title3)
                     .foregroundColor(.green)
@@ -58,17 +47,10 @@ struct SignUpView: View {
                     TextField("Enter your Email adress" , text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
-                Text("Phone Number")
-                    .font(.title3)
-                    .foregroundColor(.green)
-                    .frame(alignment: .leading)
+               
                 
                 VStack{
-                    TextField("Enter your phone number" , text: $phone)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    
-                   
-                    
+                
                     Text("password")
                                       .font(.title3)
                                       .foregroundColor(.green)
@@ -86,13 +68,7 @@ struct SignUpView: View {
                     SecureField("Please Enter your Password", text: $VerifyPassword)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
-                    HStack{
-                        Text("Remember Me")
-                            .font(.title3)
-                            .foregroundColor(.green)
-                            .frame(alignment: .leading)
-                        Toggle("", isOn: $remembreMe)
-                    }
+                   
                     Button("Sign Up"){
                         
                     }
@@ -108,25 +84,42 @@ struct SignUpView: View {
                         .foregroundColor(.gray)
                         .frame(alignment: .leading)
                     
-                    HStack{
-                        Button("Facebook"){
-                            
+                    HStack {
+                        Button(action: {
+                            // Action à effectuer lorsque le bouton Facebook est pressé
+                        }) {
+                            HStack {
+                                Image("facebook") // Remplacez "facebook_icon" par le nom de votre image Facebook
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20) // Ajustez la taille de l'image selon vos besoins
+                                
+                                Text("Facebook")
+                            }
                         }
-                        .frame(maxWidth:  .infinity)
+                        .frame(maxWidth: .infinity)
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                         
-                        Button("Email"){
+                        Button(action: {
                             
+                        }) {
+                            HStack {
+                                Image("Gmail") // Remplacez "email_icon" par le nom de votre image Gmail ou Email
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 20, height: 20) // Ajustez la taille de l'image selon vos besoins
+                                
+                                Text("Gmail")
+                            }
                         }
-                        .frame(maxWidth:  .infinity)
+                        .frame(maxWidth: .infinity)
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        
-                       
                     }
+
                 }
             }.padding()
             VStack{

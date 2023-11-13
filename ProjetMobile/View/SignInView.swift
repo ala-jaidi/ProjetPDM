@@ -95,25 +95,42 @@ struct SignInView: View {
                     .frame(alignment: .leading)
                     
                 }
-                HStack{
-                    Button("Facebook"){
-                        
+                HStack {
+                    Button(action: {
+                        // Action à effectuer lorsque le bouton Facebook est pressé
+                    }) {
+                        HStack {
+                            Image("facebook") // Remplacez "facebook_icon" par le nom de votre image Facebook
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20) // Ajustez la taille de l'image selon vos besoins
+                            
+                            Text("Facebook")
+                        }
                     }
-                    .frame(maxWidth:  .infinity)
+                    .frame(maxWidth: .infinity)
                     .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
                     
-                    Button("Email"){
-                        
+                    Button(action: {
+                        // Action à effectuer lorsque le bouton Email est pressé
+                    }) {
+                        HStack {
+                            Image("Gmail") // Remplacez "email_icon" par le nom de votre image Gmail ou Email
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 20, height: 20) // Ajustez la taille de l'image selon vos besoins
+                            
+                            Text("Gmail")
+                        }
                     }
-                    .frame(maxWidth:  .infinity)
+                    .frame(maxWidth: .infinity)
                     .background(Color.green)
                     .foregroundColor(.white)
                     .cornerRadius(10)
-                    
-                   
                 }
+
                 
                
               

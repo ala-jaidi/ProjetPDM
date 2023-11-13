@@ -11,6 +11,7 @@ struct ForgotPasswordView: View {
     @State private var email = ""
     @State private var isPasswordResetSent = false
     @State private var password = ""
+    @State private var isEmailValid = true
     
     var body: some View {
         VStack {
@@ -25,8 +26,14 @@ struct ForgotPasswordView: View {
             VStack{
                 TextField("Enter Your Email", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .onChange(of: email, perform: { newValue in
+                        isEmailValid = isValidEmail(newValue)
+                                           })
             }
-            
+            if !isEmailValid {
+                                Text("Invalid email address")
+                                    .foregroundColor(.red)
+                            }
             
             VStack{
                 
@@ -41,9 +48,15 @@ struct ForgotPasswordView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
             }
-            .padding()
-        }
+            
+        }.padding()
+        
     }
+    
+    func isValidEmail(_ email: String) -> Bool {
+            let emailPredicate = NSPredicate(format: "SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}")
+            return emailPredicate.evaluate(with: email)
+        }
     
     struct ForgotPasswordView_Previews: PreviewProvider {
         static var previews: some View {
